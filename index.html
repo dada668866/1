@@ -3,57 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>百度链接按键</title>
+    <title>分组列表</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .list-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .list-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            cursor: default;
+        }
+        
+        .list-item:last-child {
+            border-bottom: none;
+        }
+        
+        .list-item:hover {
             background-color: #f5f5f5;
         }
         
-        .button-container {
-            text-align: center;
-        }
-        
-        .baidu-button {
-            background-color: #4285f4;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 18px;
-            border-radius: 5px;
+        .list-item.clickable {
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            color: #0066cc;
+            font-weight: 500;
         }
         
-        .baidu-button:hover {
-            background-color: #3367d6;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        .list-item.clickable:hover {
+            background-color: #e6f3ff;
+            text-decoration: underline;
         }
         
-        .baidu-button:active {
-            transform: translateY(0);
-            box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
         }
     </style>
 </head>
 <body>
-    <div class="button-container">
-        <h1>点击访问百度</h1>
-        <button class="baidu-button" onclick="openBaidu()">
-            打开百度
-        </button>
+    <h1>分组列表</h1>
+    <div class="list-container">
+        <div class="list-item">第一组</div>
+        <div class="list-item">第二组</div>
+        <div class="list-item">第三组</div>
+        <div class="list-item">第四组</div>
+        <div class="list-item clickable" onclick="openSpecialPage()">第五组</div>
+        <div class="list-item">第六组</div>
+        <div class="list-item">第七组</div>
+        <div class="list-item">第八组</div>
+        <div class="list-item">第九组</div>
+        <div class="list-item">第十组</div>
     </div>
 
     <script>
-        function openBaidu() {
-            window.open('https://www.baidu.com', '_blank');
+        function openSpecialPage() {
+            window.open('5探索特别之地.html', '_blank');
         }
     </script>
 </body>
