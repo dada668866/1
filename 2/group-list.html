@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分组列表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .list-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .list-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            cursor: default;
+        }
+        
+        .list-item:last-child {
+            border-bottom: none;
+        }
+        
+        .list-item:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .list-item.clickable {
+            cursor: pointer;
+            color: #0066cc;
+            font-weight: 500;
+        }
+        
+        .list-item.clickable:hover {
+            background-color: #e6f3ff;
+            text-decoration: underline;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>分组列表</h1>
+    <div class="list-container">
+        <div class="list-item">第一组</div>
+        <div class="list-item">第二组</div>
+        <div class="list-item">第三组</div>
+        <div class="list-item">第四组</div>
+        <div class="list-item clickable" onclick="openSpecialPage()">第五组</div>
+        <div class="list-item">第六组</div>
+        <div class="list-item">第七组</div>
+        <div class="list-item">第八组</div>
+        <div class="list-item">第九组</div>
+        <div class="list-item">第十组</div>
+    </div>
+
+    <script>
+        function openSpecialPage() {
+            window.open('5探索特别之地.html', '_blank');
+        }
+    </script>
+</body>
+</html>
